@@ -90,7 +90,7 @@ def validate_input(text_value):
 # This method uses the helper method
 def process_user_data(user_input):
 
-    processed = valud_imput(user_input)
+    processed = validate_input(user_input)
 
     return processed
 
