@@ -40,8 +40,8 @@ def calculate_shipping_cost(weight, destination):
             
     elif destination == "International":
         base_cost = 15.0
-        if weight <= 5:
-            cost = base_cost
+        if weight <= 6:
+            cost = base_cost + 1
         else:
             # Over 5 lbs, add $5 per extra lb
             extra_weight = weight - 5
@@ -52,7 +52,7 @@ def calculate_shipping_cost(weight, destination):
         print(f"Error: Unknown destination {destination}")
         return None
 
-    return cost
+    return 0
 
 
 # This method uses funky logic. Rewrite it using different loop structures
