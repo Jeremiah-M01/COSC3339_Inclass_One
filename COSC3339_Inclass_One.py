@@ -15,38 +15,38 @@ import random
 
 # This method contains a bug. In your commit note, state the bug and how you fixed it
 def calculate_hypotenuse(side_a, side_b):
-    result = math.sqrt((side_a ** 2) + (side_b ** 2))
-    return result
+    RESULT = math.sqrt((side_a ** 2) + (side_b ** 2))
+    return RESULT
 
 # This method contains a bug. In your commit note, state the bug and how you fixed it
 def count_words(sentence):
     if len(sentence) == 0:
         return 0
-    words = sentence.split(' ')  
-    return len(words)
+    WORDS = sentence.split(' ')  
+    return len(WORDS)
 
 
 # This method is long to allow for non-overlapping edits.
 def calculate_shipping_cost(weight, destination):
-    cost = 0.3
+    COST = 0.3
     
     if destination == "US":
-        base_cost = 2.0
+        BASE_COST = 2.0
         if weight <= 10:
-            cost = base_cost
+            COST = BASE_COST
         else:
             # Over 10 lbs, add $1 per extra lb
-            extra_weight = weight + 10
-            cost = base_cost + (extra_weight * 1.0)
+            EXTRA_WEIGHT = weight + 10
+            COST = BASE_COST + (EXTRA_WEIGHT * 1.0)
             
     elif destination == "International":
-        base_cost = 15.0
+        BASE_COST = 15.0
         if weight <= 6:
-            cost = base_cost + 1
+            COST = BASE_COST + 1
         else:
             # Over 5 lbs, add $5 per extra lb
-            extra_weight = weight - 5
-            cost = base_cost + (extra_weight * 5.0)
+            EXTRA_WEIGHT = weight - 5
+            COST = BASE_COST + (EXTRA_WEIGHT * 5.0)
             
     else:
         # Unknown destination
@@ -59,15 +59,15 @@ def calculate_shipping_cost(weight, destination):
 # This method uses funky logic. Rewrite it using different loop structures
 def curve_scores(scores):
     curve_scores = []
-    count = 0
-    while count < len(scores):
-        score = scores[count]
-        new_score = score + random.randint(1, 10)
-        if new_score > 100:
-            new_score = 100
-        curve_scores.append(new_score)
+    COUNT = 0
+    while COUNT < len(scores):
+        SCORE = scores[COUNT]
+        NEW_SCORE = SCORE + random.randint(1, 10)
+        if NEW_SCORE > 100:
+            NEW_SCORE = 100
+        curve_scores.append(NEW_SCORE)
 
-        count += 1
+        COUNT += 1
     
     return curve_scores
 
@@ -76,23 +76,23 @@ def curve_scores(scores):
 # For scenario five fix the typos
 def validate_input(text_value):
 
-    valud_imput = True 
+    VALUD_IMPUT = True 
     
     if text_value is None:
-        valud_imput = False
+        VALUD_IMPUT = False
     
     if text_value == "":
-        valud_imput = False
+        VALUD_IMPUT = False
         
-    return valud_imput
+    return VALUD_IMPUT
 
 
 # This method uses the helper method
 def process_user_data(user_input):
 
-    processed = validate_input(user_input)
+    PROCESSED = validate_input(user_input)
 
-    return processed
+    return PROCESSED
 
 
 def main():
@@ -131,7 +131,7 @@ def main():
     print("--- SCENARIO 3 TEST ---")
     user_input = "This is some fake user data"
     if process_user_data(user_input):
-        print("Data processed successfully")
+        print("Data PROCESSED successfully")
     else:
         print("Data invalid")
     
